@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ps" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102b46">
+<title>شیخ زاید پوهنتون ـ خوست | د محصلینو مدیریت سیستم</title>
+<style>
+:root{--navy:#102b46;--blue:#174b72;--gold:#e5b84b;--bg:#f3f6fa;--card:#fff;--ink:#172b3a;--muted:#647789;--line:#dbe4ec;--green:#16784a;--red:#b42318}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,"Noto Naskh Arabic",Arial,sans-serif;line-height:1.65}
+header{background:linear-gradient(130deg,var(--navy),var(--blue));color:#fff;padding:22px 16px 18px;border-bottom:4px solid var(--gold)}
+header h1{margin:0;font-size:23px}header p{margin:5px 0 0;color:#e5edf4;font-size:13px}
+.wrap{max-width:1100px;margin:auto;padding:14px}
+.nav{display:flex;gap:7px;overflow:auto;padding:8px 0 13px}
+.nav button{white-space:nowrap;border:1px solid var(--line);background:#fff;color:var(--navy);padding:10px 13px;border-radius:11px;font-weight:700;cursor:pointer}
+.nav button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.panel{display:none}.panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:16px;margin-bottom:14px;box-shadow:0 3px 12px #183c5510}
+h2{font-size:19px;margin:0 0 12px;color:var(--navy)}h3{font-size:16px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:11px}
+label{display:block;font-size:13px;font-weight:700;margin:0 0 4px;color:#354b5e}
+input,select,textarea{width:100%;border:1px solid #cbd7e2;border-radius:9px;padding:11px;font:inherit;background:#fff;color:var(--ink);min-height:43px}
+textarea{min-height:90px;resize:vertical}
+button{font:inherit}.primary,.secondary,.danger{border:0;border-radius:9px;padding:10px 14px;cursor:pointer;font-weight:700;margin:8px 4px 0 0}
+.primary{background:var(--navy);color:#fff}.secondary{background:#e7eef5;color:var(--navy)}.danger{background:#fff0ef;color:var(--red)}
+.actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:580px}th,td{padding:9px;border-bottom:1px solid var(--line);text-align:right;vertical-align:top}th{background:#edf3f8;color:var(--navy)}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:10px;margin-top:12px}
+.muted{color:var(--muted);font-size:13px}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.stat{background:#edf4fa;border-radius:12px;padding:14px}.stat b{display:block;font-size:25px;color:var(--navy)}
+.notice{padding:11px;border-radius:10px;background:#fff8df;border:1px solid #f0df9c;font-size:13px;margin-bottom:12px}
+.ok{color:var(--green);font-weight:700}.empty{padding:18px;text-align:center;color:var(--muted)}
+footer{text-align:center;color:var(--muted);padding:22px 8px;font-size:12px}
+.creator{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}.avatar{width:74px;height:74px;border-radius:50%;background:#e6edf5;display:grid;place-items:center;font-size:30px;color:var(--navy);overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover}
+@media(max-width:500px){header h1{font-size:20px}.wrap{padding:9px}.card{padding:12px}table{font-size:12px}}
+
+/* Academic navy-and-gold redesign */
+:root{--navy:#071a2b;--blue:#123a55;--gold:#d8b35a;--bg:#f4f6f8;--card:#fff;--ink:#172b3a;--muted:#667789;--line:#dbe3e9;--green:#16784a;--red:#b42318}
+body{background:radial-gradient(ellipse at top,#e8edf1 0,#f5f6f7 42%,#f2f4f6 100%)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#061421 0%,#0b2940 48%,#164562 100%);color:#fff;padding:42px 18px 34px;border-bottom:5px solid var(--gold);text-align:center;isolation:isolate}
+.hero:before,.hero:after{content:"";position:absolute;z-index:-1;opacity:.13;pointer-events:none}
+.hero:before{inset:0;background:repeating-linear-gradient(135deg,transparent 0 26px,#e8c976 27px 28px,transparent 29px 54px);mask-image:linear-gradient(90deg,#000,transparent 43%,transparent 57%,#000)}
+.hero:after{width:330px;height:330px;border:1px solid #d8b35a;border-radius:50%;top:-215px;right:calc(50% - 165px);box-shadow:0 0 0 16px #d8b35a0b,0 0 0 34px #d8b35a0b}
+.hero-inner{max-width:900px;margin:auto;position:relative}
+.crest{width:52px;height:52px;border:1px solid #d8b35a;border-radius:50%;display:grid;place-items:center;margin:0 auto 10px;color:#f0d28a;font-size:25px;box-shadow:0 0 25px #d8b35a20}
+.eyebrow{color:#e8cd8a;font-size:12px;letter-spacing:2px;margin:0 0 7px}
+.hero h1{font-size:clamp(25px,4.5vw,39px);line-height:1.4;margin:0;color:#fff;font-weight:800;text-shadow:0 2px 18px #0005}
+.gold-rule{height:2px;width:88px;background:linear-gradient(90deg,transparent,#e6c56e,transparent);margin:14px auto}
+.hero h2{font-size:clamp(17px,3vw,23px);color:#fff;margin:0 0 5px}
+.hero-sub{color:#d5e0e8;font-size:13px;margin:0}
+.hero-tags{display:flex;justify-content:center;gap:8px;margin-top:17px}.hero-tags span{border:1px solid #d8b35a75;color:#f1d894;padding:3px 13px;border-radius:30px;font-size:11px}
+.wrap{max-width:1160px;padding:17px}
+.nav{padding:13px 0 16px;scrollbar-width:thin}.nav button{border-radius:9px;transition:background .15s,border-color .15s}.nav button.active{background:linear-gradient(135deg,#071a2b,#174b6a);border-color:#d8b35a;box-shadow:0 4px 12px #0b29401a}
+.card{border-radius:14px;box-shadow:0 6px 24px #0d2b4010;border-color:#dfe6eb}
+h2{letter-spacing:.05px}.stat{background:linear-gradient(145deg,#f2f6f8,#e8eef3);border:1px solid #dfe7ed}.stat b{color:#0d3550}
+.primary{background:linear-gradient(135deg,#092239,#164967)}.primary:hover{filter:brightness(1.12)}
+input:focus,select:focus,textarea:focus{outline:2px solid #d8b35a66;border-color:#b18a31}
+.notice{border-radius:12px;background:#fffaf0;border-color:#ead9a7;color:#5b4b27}
+footer{border-top:1px solid var(--line);margin-top:12px}
+@media(max-width:500px){.hero{padding:30px 12px 26px}.hero h1{font-size:24px}.wrap{padding:9px}.hero-tags{margin-top:13px}}
+
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="crest" aria-hidden="true">✦</div>
+    <p class="eyebrow">تعلیمي او اداري سیستم</p>
+    <h1>شیخ زاید پوهنتون ـ خوست</h1>
+    <div class="gold-rule"></div>
+    <h2>د محصلینو د مدیریت سیستم</h2>
+    <p class="hero-sub">د محصلینو ثبت، حاضري، نمرې، فیصدي او تعلیمي معلومات</p>
+    <div class="hero-tags"><span>علم</span><span>نظم</span><span>روڼتیا</span></div>
+  </div>
+</header>
+<div class="wrap">
+  <div class="notice"><strong>د ازمایښتي نسخې یادونه:</strong> دا نسخه معلومات یوازې په همدې براوزر او موبایل کې ساتي؛ تر څو چې خوندي آنلاین ډیټابېس او حسابونه نه وي وصل شوي، معلومات له نورو موبایلونو سره نه شریکېږي. د معلوماتو د ساتنې لپاره وخت په وخت بیک‌اپ واخلئ.</div>
+  <nav class="nav" aria-label="اصلي برخې">
+    <button class="active" data-tab="home">کورپاڼه</button>
+    <button data-tab="students">محصلین</button>
+    <button data-tab="attendance">حاضري</button>
+    <button data-tab="grades">نمرې او فیصدي</button>
+    <button data-tab="subjects">مضامین او استادان</button>
+    <button data-tab="creator">د جوړوونکي معلومات</button>
+    <button data-tab="backup">بیک‌اپ</button>
+  </nav>
+
+  <section id="home" class="panel active">
+    <div class="card"><h2>ښه راغلاست</h2><p>له لاندې برخو څخه یوه وټاکئ. هره برخه په همدې اپلیکیشن کې معلومات ثبتوي.</p>
+      <div class="stats">
+        <div class="stat">ټول محصلین<b id="statStudents">0</b></div>
+        <div class="stat">د حاضري ثبتونه<b id="statAttendance">0</b></div>
+        <div class="stat">د نمرو ثبتونه<b id="statGrades">0</b></div>
+        <div class="stat">مضامین<b id="statSubjects">0</b></div>
+      </div>
+    </div>
+    <div class="card"><h2>مهمې یادونې</h2><ul><li>د محصل د نوم او معلوماتو د ثبت لپاره «محصلین» خلاص کړئ.</li><li>د هرې ورځې حاضري په «حاضري» کې ثبت کړئ.</li><li>د ترلاسه شوو نمرو او ټول نمرو له مخې فیصدي په اتومات ډول محاسبه کېږي.</li><li>د بیک‌اپ برخه د معلوماتو د صادرولو او بېرته راوړلو لپاره ده.</li></ul></div>
+  </section>
+
+  <section id="students" class="panel">
+    <div class="card"><h2>د محصل ثبتول</h2>
+      <form id="studentForm">
+        <input type="hidden" id="studentEditId">
+        <div class="grid">
+          <div><label for="stName">د محصل بشپړ نوم *</label><input id="stName" required placeholder="د محصل نوم"></div>
+          <div><label for="stFather">د پلار نوم</label><input id="stFather" placeholder="د پلار نوم"></div>
+          <div><label for="stId">د محصل پېژندشمېره</label><input id="stId" placeholder="شمېره"></div>
+          <div><label for="stFaculty">پوهنځی</label><input id="stFaculty" value="شرعیاتو پوهنځی"></div>
+          <div><label for="stDept">څانګه</label><input id="stDept" value="فقه او قانون"></div>
+          <div><label for="stSemester">سمستر</label><input id="stSemester" value="اول سمستر"></div>
+          <div><label for="stEmail">ایمیل</label><input id="stEmail" type="email" placeholder="example@email.com"></div>
+          <div><label for="stPhone">د اړیکې شمېره</label><input id="stPhone" type="tel" placeholder="د موبایل شمېره"></div>
+          <div><label for="stAddress">اصلي استوګنځی</label><input id="stAddress" placeholder="ولایت / ولسوالۍ"></div>
+          <div><label for="stCurrent">اوسنی استوګنځی</label><input id="stCurrent" placeholder="اوسنی ځای"></div>
+        </div>
+        <div class="actions"><button class="primary" type="submit">ثبت / بدلون خوندي کول</button><button class="secondary" type="button" id="studentClear">فورمه پاکول</button></div>
+        <p id="studentMsg" class="muted" role="status"></p>
+      </form>
+    </div>
+    <div class="card"><h2>د محصلینو لېست</h2><input id="studentSearch" placeholder="د نوم، پلار نوم یا پېژندشمېرې له مخې لټون">
+      <div class="tablewrap"><table><thead><tr><th>نوم</th><th>د پلار نوم</th><th>پېژندشمېره</th><th>پوهنځی / څانګه</th><th>سمستر</th><th>عملیات</th></tr></thead><tbody id="studentRows"></tbody></table></div>
+    </div>
+  </section>
+
+  <section id="attendance" class="panel">
+    <div class="card"><h2>د حاضري ثبت</h2><form id="attendanceForm">
+      <div class="grid">
+        <div><label for="attStudent">محصل *</label><select id="attStudent" required></select></div>
+        <div><label for="attDate">نېټه *</label><input id="attDate" type="date" required></div>
+        <div><label for="attStatus">حالت *</label><select id="attStatus"><option>حاضر</option><option>غیرحاضر</option><option>ناوخته</option><option>رخصت</option></select></div>
+        <div><label for="attNote">یادونه</label><input id="attNote" placeholder="اختیاري"></div>
+      </div><button class="primary" type="submit">حاضري ثبت کړه</button><p id="attMsg" class="muted"></p>
+    </form></div>
+    <div class="card"><h2>د حاضري راپور</h2><div class="grid"><div><label for="attFilterDate">د نېټې له مخې فلټر</label><input id="attFilterDate" type="date"></div><div><label for="attFilterStudent">د محصل له مخې فلټر</label><select id="attFilterStudent"></select></div></div>
+      <div class="tablewrap"><table><thead><tr><th>محصل</th><th>نېټه</th><th>حالت</th><th>یادونه</th><th>عملیات</th></tr></thead><tbody id="attendanceRows"></tbody></table></div>
+    </div>
+  </section>
+
+  <section id="grades" class="panel">
+    <div class="card"><h2>نمرې او د فیصدي حساب</h2><form id="gradeForm">
+      <div class="grid">
+        <div><label for="grStudent">محصل *</label><select id="grStudent" required></select></div>
+        <div><label for="grSubject">مضمون *</label><input id="grSubject" required placeholder="د مضمون نوم"></div>
+        <div><label for="grEarned">ترلاسه شوې نمرې *</label><input id="grEarned" type="number" min="0" step="any" required placeholder="مثلاً 85"></div>
+        <div><label for="grTotal">ټولې نمرې *</label><input id="grTotal" type="number" min="0.01" step="any" required value="100"></div>
+        <div><label for="grTeacher">استاد</label><input id="grTeacher" placeholder="د استاد نوم"></div>
+      </div><button class="primary" type="submit">نمرې ثبت کړه</button><p id="gradeMsg" class="muted"></p>
+    </form></div>
+    <div class="card"><h2>د نمرو لېست</h2><div class="tablewrap"><table><thead><tr><th>محصل</th><th>مضمون</th><th>ترلاسه شوې</th><th>ټولې</th><th>فیصدي</th><th>عملیات</th></tr></thead><tbody id="gradeRows"></tbody></table></div>
+      <p id="gradeSummary" class="muted"></p>
+    </div>
+  </section>
+
+  <section id="subjects" class="panel">
+    <div class="card"><h2>مضمون او استاد ثبتول</h2><form id="subjectForm"><div class="grid">
+      <div><label for="subName">د مضمون نوم *</label><input id="subName" required placeholder="د مضمون نوم"></div>
+      <div><label for="subTeacher">د مضمون استاد</label><input id="subTeacher" placeholder="د استاد نوم"></div>
+      <div><label for="subSemester">سمستر</label><input id="subSemester" value="اول سمستر"></div>
+    </div><button class="primary" type="submit">مضمون ثبت کړه</button><p id="subjectMsg" class="muted"></p></form>
+    <div class="tablewrap"><table><thead><tr><th>مضمون</th><th>استاد</th><th>سمستر</th><th>عملیات</th></tr></thead><tbody id="subjectRows"></tbody></table></div>
+    </div>
+  </section>
+
+  <section id="creator" class="panel">
+    <div class="card"><h2>د جوړوونکي معلومات</h2><div class="creator"><div class="avatar" id="creatorAvatar">ع</div><div><h3>عباس فقيري صافي</h3><p>د پلار نوم: مولوي ميرعلي فقير</p><p>پوهنځی: شرعیاتو پوهنځی</p><p>څانګه: فقه او قانون</p><p>سمستر: اول سمستر</p><p>اصلي استوګنځی: لغمان ولایت</p></div></div>
+      <hr style="border:0;border-top:1px solid var(--line);margin:16px 0">
+      <label for="creatorPhoto">خپل عکس وټاکئ (اختیاري)</label><input id="creatorPhoto" type="file" accept="image/*"><p id="photoMsg" class="muted">عکس به یوازې په همدې براوزر کې خوندي شي.</p>
+    </div>
+  </section>
+
+  <section id="backup" class="panel">
+    <div class="card"><h2>د معلوماتو بیک‌اپ</h2><p>د موبایل د بدلولو یا د براوزر د معلوماتو د پاکېدو په صورت کې بیک‌اپ مهم دی.</p>
+      <button class="primary" id="exportBtn">معلومات فایل ته صادر کړه</button>
+      <div style="margin-top:16px"><label for="importFile">له بیک‌اپ څخه معلومات بېرته راوړه</label><input type="file" id="importFile" accept=".json,application/json"><button class="secondary" id="importBtn">فایل وارد کړه</button></div>
+      <p id="backupMsg" class="muted"></p>
+      <button class="danger" id="clearAll">ټول معلومات پاکول</button>
+    </div>
+  </section>
+  <footer>شیخ زاید پوهنتون ـ خوست · د محصلینو د مدیریت سیستم<br>جوړوونکی: عباس فقيري صافي</footer>
+</div>
+<script>
+(function(){
+'use strict';
+const KEY='abas_student_manager_v2';
+const blank=()=>({students:[],attendance:[],grades:[],subjects:[],creatorPhoto:''});
+let db;
+try{db=JSON.parse(localStorage.getItem(KEY)||'null')||blank()}catch(e){db=blank()}
+for(const k of Object.keys(blank())) if(!(k in db)) db[k]=blank()[k];
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(db));renderStats();return true}catch(e){alert('معلومات نه خوندي کېږي. د موبایل حافظه یا د براوزر تنظیمات وګورئ.');return false}};
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+const person=id=>db.students.find(s=>s.id===id);
+const pname=id=>person(id)?.name||'محصل حذف شوی';
+const pct=(a,t)=>t>0?(a/t*100):0;
+function showMsg(id,msg,ok=true){$(id).textContent=msg;$(id).className=ok?'ok':'muted'}
+function renderStats(){$('statStudents').textContent=db.students.length;$('statAttendance').textContent=db.attendance.length;$('statGrades').textContent=db.grades.length;$('statSubjects').textContent=db.subjects.length}
+function fillStudentSelects(){
+ const selects=['attStudent','attFilterStudent','grStudent'];
+ selects.forEach(id=>{const el=$(id),old=el.value;const any=id==='attFilterStudent'?'<option value="">ټول محصلین</option>':'';el.innerHTML=any+db.students.map(s=>`<option value="${esc(s.id)}">${esc(s.name)}${s.sid?' — '+esc(s.sid):''}</option>`).join('');if(old&&[...el.options].some(o=>o.value===old))el.value=old;if(!db.students.length&&id!=='attFilterStudent')el.innerHTML='<option value="">لومړی محصل ثبت کړئ</option>'});
+}
+function renderStudents(){
+ const q=$('studentSearch').value.trim().toLowerCase();
+ const arr=db.students.filter(s=>[s.name,s.father,s.sid,s.faculty,s.dept].join(' ').toLowerCase().includes(q));
+ $('studentRows').innerHTML=arr.length?arr.map(s=>`<tr><td>${esc(s.name)}</td><td>${esc(s.father)}</td><td>${esc(s.sid)}</td><td>${esc(s.faculty)} / ${esc(s.dept)}</td><td>${esc(s.semester)}</td><td><button class="secondary" data-edit-st="${esc(s.id)}">بدلون</button> <button class="danger" data-del-st="${esc(s.id)}">حذف</button></td></tr>`).join(''):'<tr><td colspan="6" class="empty">تر اوسه محصل نه دی ثبت شوی</td></tr>';
+}
+function renderAttendance(){
+ const date=$('attFilterDate').value, student=$('attFilterStudent').value;
+ const arr=db.attendance.filter(a=>(!date||a.date===date)&&(!student||a.studentId===student)).slice().sort((a,b)=>b.date.localeCompare(a.date));
+ $('attendanceRows').innerHTML=arr.length?arr.map(a=>`<tr><td>${esc(pname(a.studentId))}</td><td>${esc(a.date)}</td><td>${esc(a.status)}</td><td>${esc(a.note)}</td><td><button class="danger" data-del-att="${esc(a.id)}">حذف</button></td></tr>`).join(''):'<tr><td colspan="5" class="empty">د حاضري ثبت نشته</td></tr>';
+}
+function renderGrades(){
+ $('gradeRows').innerHTML=db.grades.length?db.grades.slice().reverse().map(g=>`<tr><td>${esc(pname(g.studentId))}</td><td>${esc(g.subject)}</td><td>${g.earned}</td><td>${g.total}</td><td><strong>${pct(g.earned,g.total).toFixed(2)}%</strong></td><td><button class="danger" data-del-gr="${esc(g.id)}">حذف</button></td></tr>`).join(''):'<tr><td colspan="6" class="empty">نمرې نه دي ثبت شوې</td></tr>';
+ const groups={};db.grades.forEach(g=>{if(!groups[g.studentId])groups[g.studentId]={a:0,t:0};groups[g.studentId].a+=Number(g.earned);groups[g.studentId].t+=Number(g.total)});
+ const summaries=Object.entries(groups).map(([id,v])=>`${pname(id)}: ${pct(v.a,v.t).toFixed(2)}%`);
+ $('gradeSummary').textContent=summaries.length?'د هر محصل د ثبت شوو نمرو عمومي فیصدي: '+summaries.join(' | '):'د فیصدي حساب د ترلاسه شوو نمرو ÷ ټولې نمرو × ۱۰۰ له مخې کېږي.';
+}
+function renderSubjects(){$('subjectRows').innerHTML=db.subjects.length?db.subjects.map(s=>`<tr><td>${esc(s.name)}</td><td>${esc(s.teacher)}</td><td>${esc(s.semester)}</td><td><button class="danger" data-del-sub="${esc(s.id)}">حذف</button></td></tr>`).join(''):'<tr><td colspan="4" class="empty">مضمون نه دی ثبت شوی</td></tr>'}
+function render(){renderStats();fillStudentSelects();renderStudents();renderAttendance();renderGrades();renderSubjects();if(db.creatorPhoto)$('creatorAvatar').innerHTML=`<img alt="د جوړوونکي عکس" src="${db.creatorPhoto}">`}
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===b.dataset.tab));if(b.dataset.tab==='attendance')renderAttendance()}));
+$('studentForm').addEventListener('submit',e=>{e.preventDefault();const edit=$('studentEditId').value;const s={id:edit||uid(),name:$('stName').value.trim(),father:$('stFather').value.trim(),sid:$('stId').value.trim(),faculty:$('stFaculty').value.trim(),dept:$('stDept').value.trim(),semester:$('stSemester').value.trim(),email:$('stEmail').value.trim(),phone:$('stPhone').value.trim(),address:$('stAddress').value.trim(),current:$('stCurrent').value.trim()};if(!s.name)return;if(edit){const i=db.students.findIndex(x=>x.id===edit);if(i>=0)db.students[i]=s}else db.students.push(s);save();render();$('studentForm').reset();$('studentEditId').value='';$('stFaculty').value='شرعیاتو پوهنځی';$('stDept').value='فقه او قانون';$('stSemester').value='اول سمستر';showMsg('studentMsg',edit?'د محصل معلومات بدل او خوندي شول.':'محصل په بریالیتوب ثبت شو.')});
+$('studentClear').addEventListener('click',()=>{$('studentForm').reset();$('studentEditId').value='';$('stFaculty').value='شرعیاتو پوهنځی';$('stDept').value='فقه او قانون';$('stSemester').value='اول سمستر';showMsg('studentMsg','فورمه پاکه شوه.')});
+$('studentSearch').addEventListener('input',renderStudents);
+$('attendanceForm').addEventListener('submit',e=>{e.preventDefault();if(!db.students.length){showMsg('attMsg','لومړی یو محصل ثبت کړئ.',false);return}const sid=$('attStudent').value,date=$('attDate').value;if(!sid||!date){showMsg('attMsg','محصل او نېټه وټاکئ.',false);return}const duplicate=db.attendance.find(a=>a.studentId===sid&&a.date===date);const item={id:duplicate?.id||uid(),studentId:sid,date,status:$('attStatus').value,note:$('attNote').value.trim()};if(duplicate)db.attendance[db.attendance.indexOf(duplicate)]=item;else db.attendance.push(item);save();render();$('attNote').value='';showMsg('attMsg',duplicate?'د همدې ورځې حاضري تازه شوه.':'حاضري ثبت شوه.')});
+$('attDate').value=new Date().toISOString().slice(0,10);$('attFilterDate').addEventListener('change',renderAttendance);$('attFilterStudent').addEventListener('change',renderAttendance);
+$('gradeForm').addEventListener('submit',e=>{e.preventDefault();if(!db.students.length){showMsg('gradeMsg','لومړی یو محصل ثبت کړئ.',false);return}const earned=Number($('grEarned').value),total=Number($('grTotal').value);if(total<=0||earned<0||earned>total){showMsg('gradeMsg','نمرې باید له صفره کمې نه وي او ترلاسه شوې نمرې باید له ټولو نمرو زیاتې نه وي.',false);return}db.grades.push({id:uid(),studentId:$('grStudent').value,subject:$('grSubject').value.trim(),earned,total,teacher:$('grTeacher').value.trim()});save();render();showMsg('gradeMsg',`نمرې ثبت شوې. فیصدي: ${pct(earned,total).toFixed(2)}%`);$('grEarned').value='';$('grSubject').value='';$('grTeacher').value=''});
+$('subjectForm').addEventListener('submit',e=>{e.preventDefault();db.subjects.push({id:uid(),name:$('subName').value.trim(),teacher:$('subTeacher').value.trim(),semester:$('subSemester').value.trim()});save();render();$('subjectForm').reset();$('subSemester').value='اول سمستر';showMsg('subjectMsg','مضمون ثبت شو.')});
+document.addEventListener('click',e=>{
+ const t=e.target;
+ if(t.dataset.editSt){const s=person(t.dataset.editSt);if(!s)return;const map={studentEditId:'id',stName:'name',stFather:'father',stId:'sid',stFaculty:'faculty',stDept:'dept',stSemester:'semester',stEmail:'email',stPhone:'phone',stAddress:'address',stCurrent:'current'};Object.entries(map).forEach(([el,k])=>$(el).value=s[k]||'');document.querySelector('[data-tab="students"]').click();$('stName').focus();showMsg('studentMsg','اوس معلومات بدل کړئ او خوندي کول کېکاږئ.')}
+ if(t.dataset.delSt){if(confirm('دا محصل او د هغه اړوند حاضري/نمرې حذف شي؟')){const id=t.dataset.delSt;db.students=db.students.filter(s=>s.id!==id);db.attendance=db.attendance.filter(a=>a.studentId!==id);db.grades=db.grades.filter(g=>g.studentId!==id);save();render()}}
+ if(t.dataset.delAtt){db.attendance=db.attendance.filter(a=>a.id!==t.dataset.delAtt);save();render()}
+ if(t.dataset.delGr){db.grades=db.grades.filter(g=>g.id!==t.dataset.delGr);save();render()}
+ if(t.dataset.delSub){db.subjects=db.subjects.filter(s=>s.id!==t.dataset.delSub);save();render()}
+});
+$('creatorPhoto').addEventListener('change',e=>{const f=e.target.files?.[0];if(!f)return;if(f.size>1500000){showMsg('photoMsg','عکس ډېر لوی دی؛ تر ۱.۵ MB کوچنی عکس وټاکئ.',false);return}const r=new FileReader();r.onload=()=>{db.creatorPhoto=r.result;save();render();showMsg('photoMsg','عکس خوندي شو.')};r.readAsDataURL(f)});
+$('exportBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='student-management-backup.json';a.click();URL.revokeObjectURL(a.href);showMsg('backupMsg','د بیک‌اپ فایل صادر شو.')});
+$('importBtn').addEventListener('click',()=>{const f=$('importFile').files?.[0];if(!f){showMsg('backupMsg','لومړی د بیک‌اپ JSON فایل وټاکئ.',false);return}const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result);if(!x||!Array.isArray(x.students)||!Array.isArray(x.attendance)||!Array.isArray(x.grades))throw Error('bad');if(!confirm('اوسني معلومات د بیک‌اپ په معلوماتو بدل شي؟'))return;db={...blank(),...x};save();render();showMsg('backupMsg','معلومات بېرته راوړل شول.')}catch(err){showMsg('backupMsg','دا د سیستم سم بیک‌اپ فایل نه دی.',false)}};r.readAsText(f)});
+$('clearAll').addEventListener('click',()=>{if(confirm('ډاډه یاست؟ ټول محصلین، حاضري، نمرې او مضامین به پاک شي.')){db=blank();save();render();showMsg('backupMsg','معلومات پاک شول.')}});
+render();
+})();
+</script>
+</body>
+</html>
